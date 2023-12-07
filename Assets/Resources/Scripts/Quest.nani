@@ -1,0 +1,44 @@
+# startQuest
+@showUI QuestUI
+@questEvent "1. Отправиться в кибер лес."
+@questNameEvent "startQuest"
+@char Dealer pos:20,-60 scale:1
+@return
+
+# continueQuest
+@showUI QuestUI
+@questEvent "2. Найти Сири, достать устройство."
+@questNameEvent "continueQuest"
+@char Dealer pos:20,-60 scale:1
+@return
+
+# continueQuest2
+@showUI QuestUI
+@questEvent "3. Взломать автомат."
+@questNameEvent "continueQuest2"
+@return
+
+# continueQuest3
+@showUI QuestUI
+@questEvent "4. Отправиться за устройством."
+@questNameEvent "continueQuest3"
+@return
+
+# continueQuest4
+@showUI QuestUI
+@questEvent "5. Вернуться на поля."
+@questNameEvent "continueQuest4"
+@return
+
+# continueQuest5
+@showUI QuestUI
+@questEvent "6. Вернуться в город."
+@questNameEvent "continueQuest5"
+@return
+
+# CompleteQuest
+@showUI QuestUI
+@questEvent " МИСИИЯ ВЫПОЛНЕНА!"
+@questNameEvent "CompleteQuest"
+@hideUI QuestUI
+@return

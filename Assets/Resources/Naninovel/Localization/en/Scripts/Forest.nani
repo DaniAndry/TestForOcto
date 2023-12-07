@@ -1,0 +1,9 @@
+; Russian <ru> to English <en> localization document for `Forest` naninovel script
+
+# 150e2592
+; @print text:"Попробую использовать его здесь!"
+@print text:"I'll try using it here!"
+
+# 7de6a827
+; @print text:"Кажется здесь! ДА! Пора возвращаться."
+@print text:"Seems like this is the place! YES! Time to head back."

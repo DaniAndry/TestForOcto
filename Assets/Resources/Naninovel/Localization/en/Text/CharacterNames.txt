@@ -1,0 +1,5 @@
+; Russian <ru> to English <en> localization document for `CharacterNames` naninovel script
+
+Dealer: Dealer
+Player: Player
+Siri: Siri

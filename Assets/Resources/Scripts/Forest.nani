@@ -1,0 +1,19 @@
+# StartDialogue
+@back BackgroundForest
+
+@char Player.PlayerWalk pos:70,-30 scale:0.9
+
+@printer Dialogue
+@print text:"Попробую использовать его здесь!"
+@wait 1
+@char Device pos:60,10 scale:0.3
+@gosub Quest.continueQuest4
+@print text:"Кажется здесь! ДА! Пора возвращаться."
+@goto Field.deviceFound
+
+#emptyLocation
+@hideAll
+@back BackgroundCity
+@char Player pos:80,-18 scale:0.65
+@wait 2
+@goto Map

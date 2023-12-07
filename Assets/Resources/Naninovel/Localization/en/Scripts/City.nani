@@ -1,0 +1,85 @@
+; Russian <ru> to English <en> localization document for `City` naninovel script
+
+# 2d80a4d0
+; @print text:"Привет, {PlayerName}! Мне нужна твоя помощь, есть заказ нужно достать одно устройство, для такого взломщика это не будет проблемой. Оплата по выполнению, как и всегда."
+@print text:"Hi, {PlayerName}! I need your help, there's a job to retrieve a device. For a hacker like you, it should be no problem. Payment on completion, as always."
+
+# fc06ead4
+; @choice "Идёт, что и где?" goto:.askQuestions
+@choice "Deal, what's the job and where?" 
+
+# cd030644
+; @choice "Работы сейчас хватает, соглашусь только на двойной тариф." goto:.bargain
+@choice "I've got enough work as it is, I'll agree only for double the rate." 
+
+# 81e0edac
+; @print text:"Устройство для регенерации, храниться где-то в киберполях."
+@print text:"It's a regeneration device, somewhere in the cyber fields."
+
+# 69f34a4e
+; @choice "Давай поподробнее..." goto:.askQuestions2
+@choice "Tell me more..."
+
+# cd030644
+; @choice "Работы сейчас хватает, соглашусь только на двойной тариф." goto:.bargain
+@choice "I've got enough work as it is, I'll agree only for double the rate." 
+
+# c0eda04c
+; @print text:"Если только выполнишь быстро и никакого аванса."
+@print text:"Only if you do it quickly, and no advance payment."
+
+# cd6b2a7
+; @choice "Идёт, что и где?" goto:askQuestions
+@choice "Deal, what's the job and where?"
+
+# 31600a0c
+; @choice "Киберполя не самое гостеприимное место, половина сейчас." goto:.bargain2
+@choice "Cyber fields aren't exactly welcoming, I want half up front."
+
+# ceed7a8c
+; @print text:"А ты умеешь торговаться, половину заплачу сразу."
+@print text:"You drive a hard bargain, I'll pay half now."
+
+# a205328d
+; @choice "Идёт" goto:.askQuestions2
+@choice "Deal."
+
+# 19e0bf17
+; @print text:"Хранится в каком-то старом брошенном игровом автомате, чтобы получить, нужно просто взломать игру, тебе поможет другой киберсталке её зовут Сири, она уже должна была найти автомат."
+@print text:"It's stored in some old abandoned arcade machine. To get it, you just need to hack the game. A fellow cyberstalker named Siri should have already located the machine."
+
+# ebf0e26f
+; @choice "Ладно, я приступаю..." goto:.startMission
+@choice "Okay, starting the mission..."
+
+# 7067b4ac
+; @choice "Придётся попотеть, системы там устаревшиеы." goto:.startMission
+@choice "This might be tricky, those systems are ancient."
+
+# 2fadf7dd
+; @print text:"Удачи, {PlayerName}, встретимся на этом же месте, как закончишь..."
+@print text:"Good luck, {PlayerName}. We'll meet back here when you're done..."
+
+# 27c245ee
+; @print text:"Привет, {PlayerName}! Тебе удалось достать устройство ?"
+@print text:"Hey, {PlayerName}! Did you manage to get the device?"
+
+# f53df841
+; @choice "Да оно у меня..."
+@choice "Yes, I've got it..."
+
+# d3c0c526
+; @print text:"И кому же ты решил его отдать?"
+@print text:"So, who are you planning to give it to?"
+
+# 4c16a70e
+; @choice "Отдать Сири" goto:.SiriWithDevice
+@choice "Give it to Siri"
+
+# d367b9c7
+; @choice "Отдать торговцу" goto:.DealerWithDevice
+@choice "Give it to the dealer"
+
+# f7c588d9
+; @choice "Оставить у себя" goto:.PlayerWithDevice
+@choice "Keep it for myself"

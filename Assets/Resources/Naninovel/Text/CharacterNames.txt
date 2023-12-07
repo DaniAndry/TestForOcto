@@ -1,0 +1,3 @@
+Dealer: Торговец
+Player: Игрок
+Siri: Сири

@@ -1,0 +1,5 @@
+; Russian <ru> to English <en> localization document for `NameSelector` naninovel script
+
+# c27bad22
+; @input variableName:"PlayerName" summary:"Введите имя." 
+@input variableName:"PlayerName" summary:"Enter your name." 

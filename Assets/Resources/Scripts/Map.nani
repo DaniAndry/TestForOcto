@@ -1,0 +1,24 @@
+#Map
+@hideAll
+@back MapBackground
+@hidePrinter
+
+@choice handler:ButtonArea button:MapButtons/CityButton pos:-200,-200 goto:.City
+@choice handler:ButtonArea button:MapButtons/FieldButton pos:200,100 goto:.Field
+@choice handler:ButtonArea button:MapButtons/ForestButton pos:-200,200 goto:.Forest
+@stop
+
+#City
+@mapEvent "City"
+@goto {MapPoint}
+@stop
+
+#Field
+@mapEvent "Field"
+@goto {MapPoint}
+@stop
+
+#Forest
+@mapEvent "Forest"
+@goto {MapPoint}
+@stop

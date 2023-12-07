@@ -1,0 +1,5 @@
+@back MenuBackground
+
+@input variableName:"PlayerName" summary:"Введите имя." 
+@wait {nameInput}
+@goto City.startDialogue

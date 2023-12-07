@@ -1,0 +1,78 @@
+# StartDialogue
+@back BackgroundField
+
+@char Player.PlayerWalk pos:70,-30 scale:0.9
+@printer Dialogue
+@print text:"Итак поля, гиблое место, надеюсь Сири здесь..."
+
+@char Siri pos:20,-60 scale:1
+@printer Bubble.Left pos:45,80 visible:false time:0
+
+@print text:"Привет, ты {PlayerName}?"
+
+@choice "Да. А ты сири ?" goto:.answer
+@stop
+
+# answer
+@print text:"Да."
+
+@choice "Как успехи с поиском ?" goto:.answer2
+@stop
+
+# answer2
+@print text:"Я нашла автомат, но там какая-то очень старая кодировка, я в таком не разбираюсь... "
+
+@choice "Я взгляну?" goto:.askQuestions
+@stop
+
+# askQuestions
+@print text:"Что ты планируешь сделать с устройством ? Отдать торговцу ?"
+
+@choice "Ну да, мы так договорились, а у тебя другие планы ?" goto:.askQuestions2
+@choice "Не знаю, смотря на что это устройство способно" goto:.askQuestions3
+@stop
+
+# askQuestions2
+@print text:"Мне нужно это устройство, у меня есть брат с сетрой и только такой регенератор может их спасти... Я бы заплатила тебе, но сейчас у меня нет денег. "
+@choice "Что делает это устройство ?" goto:.askQuestions3
+@stop
+
+# askQuestions3
+@print text:"По рассказам оно способно восстановить организм после самых серьезных болезней или травм. "
+@choice "Я попробую его достать, а потом уже договоримся" goto:.askQuestions4
+@stop
+
+# askQuestions4
+@print text:"Хорошо.. "
+@gosub Quest.continueQuest2
+@choice "Подключаюсь..." goto:.findDevice
+@stop
+
+#findDevice
+@gameEvent
+@print text:"Ого, так быстро получилось, но что это, похоже на маячок..."
+@char Map pos:50,100 scale:0.5 
+@choice "Это он и есть тут координаты, я отправлюсь и найду, встретимся в городе, идёт ?" goto:.findDevice2
+@stop
+
+#findDevice2
+@print text:"Надеюсь ты не обманешь, ладно встретимся в городе..."
+@gosub Quest.continueQuest3
+@hide Siri
+@goto Map
+
+#deviceFound
+@back BackgroundField
+
+@char Player.PlayerWalk pos:70,-30 scale:0.9 
+@printer Dialogue
+@print text:"Cири отрпавилась в город, стоит и мне..."
+@gosub Quest.continueQuest5
+@goto Map
+
+#emptyLocation
+@hideAll
+@back BackgroundField
+@char Player pos:80,-18 scale:0.65
+@wait 2
+@goto Map

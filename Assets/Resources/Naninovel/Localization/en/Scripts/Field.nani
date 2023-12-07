@@ -1,0 +1,81 @@
+; Russian <ru> to English <en> localization document for `Field` naninovel script
+
+# b95b6973
+; @print text:"Итак поля, гиблое место, надеюсь Сири здесь..."
+@print text:"So, the fields, a grim place, hope Siri is here..."
+
+# 69ee6930
+; @print text:"Привет, ты {PlayerName}?"
+@print text:"Hello, are you {PlayerName}?"
+
+# ccd4dea
+; @choice "Да. А ты сири ?" goto:.answer
+@choice "Yes. Are you Siri?"
+
+# 8ff3e405
+; @print text:"Да."
+@print text:"Yes."
+
+# 3ef95b5
+; @choice "Как успехи с поиском ?" goto:.answer2
+@choice "How's the search going?"
+
+# 2ff092b7
+; @print text:"Я нашла автомат, но там какая-то очень старая кодировка, я в таком не разбираюсь... "
+@print text:"I found the machine, but it has some really old coding, I don't understand it..."
+
+# 2b63af
+; @choice "Я взгляну?" goto:.askQuestions
+@choice "Shall I take a look?"
+
+# 51e434bb
+; @print text:"Что ты планируешь сделать с устройством ? Отдать торговцу ?"
+@print text:"What do you plan to do with the device? Give it to the dealer?"
+
+# b565ad74
+; @choice "Ну да, мы так договорились, а у тебя другие планы ?" goto:.askQuestions2
+@choice "Well, yes, that's what we agreed on. Do you have other plans?"
+
+# 90cdf7b2
+; @choice "Не знаю, смотря на что это устройство способно" goto:.askQuestions3
+@choice "Not sure, depends on what the device can do"
+
+# ed7d268c
+; @print text:"Мне нужно это устройство, у меня есть брат с сетрой и только такой регенератор может их спасти... Я бы заплатила тебе, но сейчас у меня нет денег. "
+@print text:"I need this device, I have a brother and sister, and only such a regenerator can save them... I would pay you, but I have no money right now."
+
+# 705b8de5
+; @choice "Что делает это устройство ?" goto:.askQuestions3
+@choice "What does this device do?"
+
+# 8a318731
+; @print text:"По рассказам оно способно восстановить организм после самых серьезных болезней или травм. "
+@print text:"From what I've heard, it can restore the body after the most serious diseases or injuries."
+
+# 4ff14d81
+; @choice "Я попробую его достать, а потом уже договоримся" goto:.askQuestions4
+@choice "I'll try to get it, and then we can make a deal"
+
+# 5d97925a
+; @print text:"Хорошо.. "
+@print text:"Okay..."
+
+# 5bd6dc66
+; @choice "Подключаюсь..." goto:.findDevice
+@choice "Connecting..."
+
+# 323cc438
+; @print text:"Ого, так быстро получилось, но что это, похоже на маячок..."
+@print text:"Wow, that was fast, but what's this? Looks like a beacon..."
+
+# 235bea9
+; @choice "Это он и есть тут координаты, я отправлюсь и найду, встретимся в городе, идёт ?" goto:.findDevice2
+@choice "That's it, here are the coordinates, I'll go find it. Meet in the city, okay?" 
+
+# 925a75a9
+; @print text:"Надеюсь ты не обманешь, ладно встретимся в городе..."
+@print text:"I hope you're not lying, alright, let's meet in the city..."
+
+# 3a505798
+; @print text:"Cири отрпавилась в город, стоит и мне..."
+@print text:"Siri headed to the city, I should too..."

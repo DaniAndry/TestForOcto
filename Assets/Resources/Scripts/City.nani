@@ -1,0 +1,98 @@
+# startDialogue
+@back BackgroundCity
+
+@char Player pos:80,-18 scale:0.65
+@char Dealer pos:20,-60 scale:1
+@printer Bubble.Left pos:35,80 visible:false time:0
+
+@print text:"Привет, {PlayerName}! Мне нужна твоя помощь, есть заказ нужно достать одно устройство, для такого взломщика это не будет проблемой. Оплата по выполнению, как и всегда."
+@choice "Идёт, что и где?" goto:.askQuestions
+@choice "Работы сейчас хватает, соглашусь только на двойной тариф." goto:.bargain
+@stop
+
+# askQuestions
+@print text:"Устройство для регенерации, храниться где-то в киберполях."
+
+@gosub Quest.startQuest
+@char Dealer pos:20,-60 scale:1
+
+@choice "Давай поподробнее..." goto:.askQuestions2
+@choice "Работы сейчас хватает, соглашусь только на двойной тариф." goto:.bargain
+@stop
+
+#bargain
+@print text:"Если только выполнишь быстро и никакого аванса."
+
+@choice "Идёт, что и где?" goto:askQuestions
+@choice "Киберполя не самое гостеприимное место, половина сейчас." goto:.bargain2
+
+@stop
+
+#bargain2
+@print text:"А ты умеешь торговаться, половину заплачу сразу."
+@gosub Quest.startQuest
+@choice "Идёт" goto:.askQuestions2
+@stop
+
+#askQuestions2
+@print text:"Хранится в каком-то старом брошенном игровом автомате, чтобы получить, нужно просто взломать игру, тебе поможет другой киберсталке её зовут Сири, она уже должна была найти автомат."
+@gosub Quest.continueQuest
+
+@choice "Ладно, я приступаю..." goto:.startMission
+@choice "Придётся попотеть, системы там устаревшиеы." goto:.startMission
+@stop
+
+#startMission
+@print text:"Удачи, {PlayerName}, встретимся на этом же месте, как закончишь..."
+@goto Map.Map
+
+#finishDialogue
+@hideAll
+@back BackgroundCity
+@char Player.PlayerIdle pos:80,-18 scale:0.65
+@char Dealer pos:15,-60 scale:1
+@char Siri pos:30,-80 scale:1
+
+@printer Bubble.Left pos:35,80 visible:false time:0
+
+@print text:"Привет, {PlayerName}! Тебе удалось достать устройство ?"
+@choice "Да оно у меня..."
+@stop
+
+@printer Bubble.Left pos:50,80 visible:false time:0
+@print text:"И кому же ты решил его отдать?"
+@wait 1
+@hidePrinter
+
+@choice "Отдать Сири" goto:.SiriWithDevice
+@choice "Отдать торговцу" goto:.DealerWithDevice
+@choice "Оставить у себя" goto:.PlayerWithDevice
+@stop
+
+#SiriWithDevice
+@char Player.PlayerIdle pos:80,-18 scale:0.65
+@char Dealer.DealerSad pos:15,-15 scale:0.5
+@char Siri.SiriFun pos:40,-80 scale:1
+@gosub Quest.CompleteQuest
+@stop
+
+#DealerWithDevice
+@char Player.PlayerIdle pos:80,-18 scale:0.65
+@char Dealer.DealerFun pos:40,-10 scale:0.9
+@char Siri.SiriSad pos:10,-80 scale:1
+@gosub Quest.CompleteQuest
+@stop
+
+#PlayerWithDevice
+@char Player.PlayerIdle pos:80,-18 scale:0.65
+@char Dealer.DealerSad pos:15,-60 scale:1
+@char Siri.SiriSad pos:30,-80 scale:1
+@gosub Quest.CompleteQuest
+@stop
+
+#emptyLocation
+@hideAll
+@back BackgroundCity
+@char Player pos:80,-18 scale:0.65
+@wait 2
+@goto Map
